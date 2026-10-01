@@ -301,3 +301,41 @@ select[aria-invalid="true"] {
     font-weight: bold;
     font-size: 0.875rem;
 }
+/* ================================
+   TEMAS DE ACESSIBILIDADE
+   ================================ */
+
+/* Modo escuro */
+[data-tema="escuro"] {
+    --cor-fundo: #121212;
+    --cor-texto: #FFFFFF;
+    --cor-branco: #1E1E1E;
+    --cor-primaria: #C6FF52;
+    --cor-primaria-escura: #8BC34A;
+    --cor-secundaria: #D5E8A8;
+    --cor-destaque: #FFD54F;
+}
+
+/* Alto contraste */
+[data-tema="alto-contraste"] {
+    --cor-fundo: #000000;
+    --cor-texto: #FFFFFF;
+    --cor-branco: #000000;
+    --cor-primaria: #FFFF00;
+    --cor-primaria-escura: #FFFFFF;
+    --cor-secundaria: #FFFFFF;
+    --cor-destaque: #FFFF00;
+}
+
+/* Melhora a visibilidade dos links nos temas */
+[data-tema="escuro"] a,
+[data-tema="alto-contraste"] a {
+    color: var(--cor-destaque);
+}
+
+/* Foco mais evidente nos temas */
+[data-tema="escuro"] :focus-visible,
+[data-tema="alto-contraste"] :focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 3px;
+}

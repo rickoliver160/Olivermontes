@@ -1,4 +1,5 @@
 import { navegar } from "./router.js";
+import { inicializarTemas } from "./tema.js";
 
 document.querySelectorAll("[data-rota]").forEach(link => {
 
@@ -13,3 +14,4 @@ document.querySelectorAll("[data-rota]").forEach(link => {
 });
 
 navegar("/");
+inicializarTemas();
