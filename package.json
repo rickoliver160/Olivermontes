@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node organizar-dist.mjs",
     "preview": "vite preview"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rickoliver160/Olivermontes.git"
+    "url": "https://github.com/rickoliver160/Olivermontes.git"
   },
   "keywords": [],
   "author": "",

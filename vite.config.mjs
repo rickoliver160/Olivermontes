@@ -6,14 +6,14 @@ export default defineConfig({
   base: '/Olivermontes/',
 
   plugins: [
-viteStaticCopy({
-  targets: [
-    {
-      src: 'imagens/*',
-      dest: '.'
-    }
-  ]
-})
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'imagens/*',
+          dest: 'imagens'
+        }
+      ]
+    })
   ],
 
   build: {
@@ -22,6 +22,10 @@ viteStaticCopy({
         index: resolve(import.meta.dirname, 'html/index.html'),
         projeto: resolve(import.meta.dirname, 'html/projeto.html'),
         cadastro: resolve(import.meta.dirname, 'html/cadastro.html')
+      },
+
+      output: {
+        assetFileNames: 'assets/[name]-[hash][extname]'
       }
     }
   }
