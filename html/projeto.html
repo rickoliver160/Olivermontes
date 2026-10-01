@@ -5,35 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos - Olivermontes</title>
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet"
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 
 <body>
 
+    <a href="#conteudo-principal" class="skip-link">
+        Ir para o conteúdo principal
+    </a>
+
     <header>
-	  <img src="../imagens/logo.png"
-      alt="Logo da Olivermontes"
-      width="150">
+        <img src="../imagens/logo.png"
+             alt="Logo da Olivermontes"
+             width="150">
+
         <h1>Olivermontes</h1>
 
-        <nav>
+        <nav aria-label="Navegação principal">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projeto.html">Projetos</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+                <li>
+                    <a href="index.html">Início</a>
+                </li>
+                <li>
+                    <a href="projeto.html" aria-current="page">Projetos</a>
+                </li>
+                <li>
+                    <a href="cadastro.html">Cadastro</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="conteudo-principal">
 
         <h2>Projetos e formas de participação</h2>
 
-        <section id="doacao">
+        <section id="doacao" aria-labelledby="titulo-doacao">
 
-            <h3>Campanhas de doação</h3>
+            <h3 id="titulo-doacao">Campanhas de doação</h3>
 
             <p>
                 A ONG Olivermontes realiza campanhas de doação para arrecadar
@@ -52,9 +65,9 @@
 
         </section>
 
-        <section id="voluntariado">
+        <section id="voluntariado" aria-labelledby="titulo-voluntariado">
 
-            <h3>Atividades de voluntariado</h3>
+            <h3 id="titulo-voluntariado">Atividades de voluntariado</h3>
 
             <p>
                 Os voluntários podem participar de ações comunitárias,
@@ -73,9 +86,9 @@
 
         </section>
 
-        <section id="participacao">
+        <section id="participacao" aria-labelledby="titulo-participacao">
 
-            <h3>Formas de Participação</h3>
+            <h3 id="titulo-participacao">Formas de Participação</h3>
 
             <p>
                 Existem diferentes formas de participar das ações da
@@ -92,54 +105,66 @@
             </ul>
 
         </section>
-<section id="feedback">
-    <h2>Feedbacks do sistema</h2>
 
-    <h3>Badges</h3>
+        <section id="feedback" aria-labelledby="titulo-feedback">
 
-    <p>
-        <span class="badge sucesso">Sucesso</span>
-        <span class="badge informacao">Informação</span>
-        <span class="badge atencao">Atenção</span>
-    </p>
+            <h2 id="titulo-feedback">Feedbacks do sistema</h2>
 
-    <h3>Alertas</h3>
+            <h3>Badges</h3>
 
-    <aside class="alerta">
-        <strong>Atenção:</strong>
-        Verifique as informações antes de realizar o cadastro.
-    </aside>
+            <p>
+                <span class="badge sucesso">Sucesso</span>
+                <span class="badge informacao">Informação</span>
+                <span class="badge atencao">Atenção</span>
+            </p>
 
-    <aside class="sucesso">
-        <strong>Sucesso:</strong>
-        Sua solicitação foi realizada com sucesso.
-    </aside>
+            <h3>Alertas</h3>
 
-    <h3>Toast</h3>
+            <aside class="alerta" role="alert">
+                <strong>Atenção:</strong>
+                Verifique as informações antes de realizar o cadastro.
+            </aside>
 
-    <aside class="toast">
-        Cadastro realizado com sucesso!
-    </aside>
+            <aside class="sucesso" role="status">
+                <strong>Sucesso:</strong>
+                Sua solicitação foi realizada com sucesso.
+            </aside>
 
-    <h3>Modal</h3>
+            <h3>Toast</h3>
 
-    <dialog open class="modal">
-        <h4>Informação</h4>
+            <aside class="toast" role="status" aria-live="polite">
+                Cadastro realizado com sucesso!
+            </aside>
 
-        <p>
-            Obrigado por participar das ações da ONG Olivermontes.
-        </p>
+            <h3>Modal</h3>
 
-        <button type="button">Fechar</button>
-    </dialog>
-</section>
+            <dialog open
+                    class="modal"
+                    aria-labelledby="titulo-modal">
+
+                <h4 id="titulo-modal">Informação</h4>
+
+                <p>
+                    Obrigado por participar das ações da ONG Olivermontes.
+                </p>
+
+                <button type="button" aria-label="Fechar janela de informação">
+                    Fechar
+                </button>
+
+            </dialog>
+
+        </section>
+
     </main>
 
     <footer>
         <p>&copy; 2026 Olivermontes - Todos os direitos reservados.</p>
     </footer>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script type="module" src="../js/app.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="../js/app.js"></script>
+
 </body>
 
 </html>

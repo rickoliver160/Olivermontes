@@ -257,3 +257,47 @@ footer {
     background-color: var(--cor-primaria-escura);
     color: var(--cor-branco);
 }
+/* ================================
+   ACESSIBILIDADE - WCAG 2.1
+   ================================ */
+
+/* Link para pular diretamente ao conteúdo principal */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 10px;
+    z-index: 9999;
+    padding: 10px 16px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Torna o link visível quando recebe foco pelo teclado */
+.skip-link:focus {
+    left: 10px;
+}
+
+/* Indicador visual para elementos navegados pelo teclado */
+:focus-visible {
+    outline: 3px solid #FFC107;
+    outline-offset: 3px;
+}
+/* ================================
+   CAMPOS COM ERRO - ACESSIBILIDADE
+   ================================ */
+
+input[aria-invalid="true"],
+select[aria-invalid="true"] {
+    border: 2px solid #B00020;
+    outline: none;
+}
+
+.mensagem-erro {
+    display: block;
+    margin-top: 4px;
+    color: #B00020;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
