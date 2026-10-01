@@ -7,13 +7,13 @@ export default defineConfig({
 
   plugins: [
     viteStaticCopy({
-      targets: [
-        {
-          src: 'imagens/*',
-          dest: 'imagens'
-        }
-      ]
-    })
+  targets: [
+    {
+      src: 'imagens/*',
+      dest: '.'
+    }
+  ]
+})
   ],
 
   build: {
