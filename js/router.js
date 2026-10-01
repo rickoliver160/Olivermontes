@@ -17,16 +17,18 @@ export function navegar(rota) {
 
     if (rota === "/") {
         app.innerHTML = templateInicio();
-    }
 
-    if (rota === "/projeto") {
+    } else if (rota === "/projeto") {
         app.innerHTML = templateProjetos();
-    }
 
-    if (rota === "/cadastro") {
+    } else if (rota === "/cadastro") {
         app.innerHTML = templateCadastro();
 
         // Inicializa as máscaras e o formulário
         inicializarFormulario();
+
+    } else {
+        console.warn(`Rota não encontrada: ${rota}`);
+        app.innerHTML = templateInicio();
     }
 }
