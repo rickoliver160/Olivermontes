@@ -1,0 +1,259 @@
+:root {
+    /* Cores */
+    --cor-primaria: #A6DE37;
+    --cor-primaria-escura: #1B5E20;
+    --cor-secundaria: #ADC781;
+    --cor-destaque: #FFC107;
+    --cor-fundo: #F5F5F5;
+    --cor-branco: #FFFFFF;
+    --cor-texto: #212121;
+    --cor-cinza: #757575;
+
+    /* Tipografia */
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-md: 1rem;
+    --font-lg: 1.5rem;
+    --font-xl: 2rem;
+
+    /* Espaçamentos */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+    --space-6: 48px;
+}
+
+
+/* CONFIGURAÇÃO GERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+
+    /* Grid de 12 colunas */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space-3);
+    padding: var(--space-4);
+}
+
+
+/* CABEÇALHO */
+
+header {
+    grid-column: 1 / 13;
+    background-color: var(--cor-primaria);
+    padding: var(--space-4);
+    text-align: center;
+}
+
+
+/* MENU */
+
+nav {
+    background-color: var(--cor-primaria-escura);
+    padding: var(--space-3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: var(--space-2);
+}
+
+nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+}
+
+
+/* CONTEÚDO */
+
+main {
+    grid-column: 1 / 13;
+}
+
+section {
+    background-color: var(--cor-branco);
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* TIPOGRAFIA */
+
+h1 {
+    font-size: var(--font-xl);
+}
+
+h2 {
+    font-size: var(--font-lg);
+}
+
+p {
+    font-size: var(--font-md);
+    line-height: 1.6;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    grid-column: 1 / 13;
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-branco);
+    padding: var(--space-4);
+    text-align: center;
+}
+
+
+/* RESPONSIVIDADE */
+
+/* 1200px */
+@media (max-width: 1200px) {
+    body {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+/* 992px */
+@media (max-width: 992px) {
+    body {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    header,
+    main,
+    footer {
+        grid-column: 1 / 9;
+    }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    header,
+    main,
+    footer {
+        grid-column: 1 / 7;
+    }
+
+    nav li {
+        display: block;
+    }
+}
+
+/* 576px */
+@media (max-width: 576px) {
+    body {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    header,
+    main,
+    footer {
+        grid-column: 1 / 5;
+    }
+}
+
+/* 400px */
+@media (max-width: 400px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    header,
+    main,
+    footer {
+        grid-column: 1;
+    }
+}/* BADGES */
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 4px;
+    border-radius: 12px;
+    font-size: var(--font-sm);
+    font-weight: bold;
+}
+
+.sucesso {
+    background-color: #E8F5E9;
+    border-left: 5px solid var(--cor-primaria-escura);
+    padding: var(--space-3);
+    margin-bottom: var(--space-3);
+}
+
+.informacao {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+
+.atencao {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+}
+
+
+/* ALERTA */
+
+.alerta {
+    background-color: #FFF3CD;
+    border-left: 5px solid var(--cor-destaque);
+    padding: var(--space-3);
+    margin-bottom: var(--space-3);
+}
+
+
+/* TOAST */
+
+.toast {
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-branco);
+    padding: var(--space-3);
+    margin-bottom: var(--space-4);
+    border-radius: 4px;
+}
+
+
+/* MODAL */
+
+.modal {
+    border: 2px solid var(--cor-primaria-escura);
+    padding: var(--space-4);
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal button {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    border: 2px solid var(--cor-primaria-escura);
+    padding: var(--space-2) var(--space-4);
+}
+
+.modal button:hover {
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-branco);
+}
