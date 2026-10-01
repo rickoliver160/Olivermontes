@@ -3,6 +3,8 @@ import { resolve } from 'node:path'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
+  base: '/Olivermontes/',
+
   plugins: [
 viteStaticCopy({
   targets: [
