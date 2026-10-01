@@ -1,3 +1,4 @@
+import imagemOng from '../imagens/ongolivermontes.webp'
 export function templateInicio() {
     return `
         <section id="sobre">
@@ -10,10 +11,10 @@ export function templateInicio() {
             </p>
 
             <img
-                src="../imagens/ongolivermontes.jpg"
-                alt="Voluntários da ONG Olivermontes reunidos durante uma ação comunitária"
-                width="400"
-            >
+    src="${imagemOng}"
+    alt="Voluntários da ONG Olivermontes reunidos durante uma ação comunitária"
+    width="400">
+            
         </section>
 
         <section id="contato">
